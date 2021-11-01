@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- <div class="left">这个 div 占据左半部分</div> -->
+    <div class="box">这个 div 占据右半部分</div>
+  </div>
+
+
+
+
+
+  <script src="js/继承的实现.js"></script>
+  <script>
+
+    var str = 'sdjaskdjsadjfffffffffffffdsfsdfsdflytthyh,fgh nbvn';
+    var obj = {};
+    for(let i of str){
+      if(!obj[i]){
+        obj[i] = 1;
+      }else{
+        obj[i] = obj[1]++;
+      }
+    }
+    console.log(obj);
+    var sum = 0;
+    var charStr = '';
+    for(let i in obj){
+      if(obj[i]>sum){
+        sum = obj[i];
+        charStr = i;
+      }
+    }
+  </script>
+</body>
+</html>

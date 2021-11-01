@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    function sayName(name){
+      console.log(this);
+      console.log('sayName:'+name);
+    }
+
+    var obj = {
+      age: 20
+    };
+    sayName.apply(obj, ['luojing1']);  // 参数需要是数组
+    sayName.call(obj, 'luojing2');  // 参数不限制
+    sayName.bind(obj)('luojing3');  // bind将obj绑定到sayName函数上后返回的是一个新函数，需要调用才会执行
+
+</script>
+</body>
+</html>
